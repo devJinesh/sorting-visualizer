@@ -1,0 +1,222 @@
+:root
+{
+    --colour-page: #1C2541;
+    --colour-element-container: #0b132b;
+    --colour-element: #cecece;
+    --colour-compared: #cf7622;
+    --colour-swapped: #cc241f;
+    --colour-sorted: #36bd1b;
+    --colour-sortindex: #6FFFE9;
+    --colour-merged: #5BC0BE;
+
+    --height-footer: 75px;
+}
+
+html
+{ 
+    height: 100%;
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+
+    /* Include padding to elements' dimensions */
+    box-sizing: border-box;
+}
+
+#content
+{
+    height: calc(100vh - var(--height-footer));
+
+    overflow-y: scroll;
+}
+
+#footer 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    height: var(--height-footer);
+    width: 100%;
+
+    /* background-color: var(--colour-element-container); */
+    /* color: var(--colour-element); */
+    background-color: black;
+    color: white;
+}
+
+
+a
+{
+    color: inherit;
+}
+
+body
+{
+    /* background-color: darkgrey; */
+    background-color: var(--colour-page);
+    min-height: 100%;
+    position: relative;
+}
+
+#primaryControls
+{
+    margin-top: 35px;
+}
+
+#uplImage
+{
+    display: none;
+}
+
+#conImageCanvas > canvas
+{
+    width: fit-content;
+    height: fit-content;
+}
+
+.uiContainer
+{
+    width: fit-content;
+    height: fit-content;
+    max-width: 90vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 25px;
+    column-gap: 25px;
+}
+
+.outerContainer
+{
+    /* Add space between edge of the container and its elements. */
+    padding: 25px;
+
+    /* Centre horizontally. */
+    margin: auto;
+
+    width: fit-content;
+    height: fit-content;
+
+    /* Add space between the bottom of this container and the top of the next container. */
+    margin-bottom: 35px;
+
+    /* Curve the corners. */
+    border-radius: 15px;
+
+    background-color: var(--colour-element-container);
+}
+
+.element
+{
+    background-color: var(--colour-element);
+
+    position: absolute;
+    bottom: 0;
+}
+
+.elementWrapper
+{
+    position: relative;
+    float: left;
+
+    height: 100%;
+}
+
+.uiTextElement
+{
+    color: var(--colour-element);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 19pt;
+    font-weight: bold;
+
+    text-align: center;
+}
+
+.uiTextContainer
+{
+    background-color: var(--colour-page);
+
+    border: 1px solid var(--colour-page);
+    border-radius: 0.5em;
+
+    padding: 10px;
+}
+
+.interactable:hover
+{
+    border-color: var(--colour-element);
+}
+
+.interactable:active
+{
+    border-color: var(--colour-page);
+
+    background-color: var(--colour-element-container);
+}
+
+label.uiTextElement
+{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+}
+
+#cmbSorters
+{
+    font-size: 17pt;
+
+    /* padding: 0 5pt 0 20pt; */
+
+    text-align: center;
+
+    /* margin-right: 0px; */
+}
+
+#rngElements
+{
+    width: 400px;
+}
+
+div.uiTextContainer
+{
+    width: 250pt;
+}
+
+div.uiTextContainer > p
+{
+    float: left;
+}
+
+div.uiTextContainer > span
+{
+    font-weight: bold;
+}
+
+div.stat
+{
+    display: inline-block;
+}
+
+.footerText
+{
+    font-size: 20px;
+}
+
+/* Prevents the scrollbar from being displayed. */
+.hideScrollBar
+{
+    /* Firefox */
+    scrollbar-width: none;
+
+    /* IE 10+ */
+    -ms-overflow-style: none;
+}

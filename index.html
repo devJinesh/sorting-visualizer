@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Sort Visualiser (Image)</title>
+        <script src = "./script.js" type = "module"></script>
+        <link rel = "stylesheet" href = "style.css">
+
+    </head>
+
+    <body>
+
+        <div id = "content" class = "">
+
+            <!-- <canvas id = "imgCanvas" width = "300" height = "227"></canvas> -->
+            <!-- <canvas id = "imgCanvas" width = "283" height = "399"></canvas> -->
+            <!-- <button id = "btnShuffle">Shuffle</button>
+            <button id = "btnSort">Sort</button> -->
+
+            <!-- The container that holds the 'primary' UI elements -->
+            <div id = "primaryControls" class = "outerContainer uiContainer controls">
+
+                <button type = "button" id = "btnSort" class = "uiTextElement uiTextContainer interactable">Sort</button>
+                <button type = "button" id = "btnShuffle" class = "uiTextElement uiTextContainer interactable">Shuffle</button>
+
+                <label for="chkAscending" class = "uiTextElement uiTextContainer interactable">
+                    Ascending
+                    <input type="checkbox" id = "chkAscending">
+                </label>
+
+                <select id = "cmbSorters" class = "uiTextElement uiTextContainer interactable"></select>
+
+                <input type = "file" id = "uplImage" accept = "image/*">
+                <label for = "uplImage" class = "uiTextElement uiTextContainer interactable">Upload Image</label>
+
+            </div>
+
+            <!-- The container that holds the elements to be sorted -->
+            <div id = "conImageCanvas" class = "outerContainer"></div>
+
+            <!-- The container that holds the 'secondary' UI elements -->
+            <div id = "secondaryControls" class = "outerContainer uiContainer controls">
+
+                <button type = "button" id = "btnStop" class = "uiTextElement uiTextContainer interactable">Stop</button>
+
+                <button type = "button" id = "btnStep" class = "uiTextElement uiTextContainer interactable">Step</button>
+
+                <label for="chkStep" class = "uiTextElement uiTextContainer interactable">
+                    Step
+                    <input type="checkbox" id = "chkStep">
+                </label>
+
+                <label for = "rngSpeed" class = "uiTextElement uiTextContainer interactable">
+                    Speed
+                    <input type = "range" id = "rngSpeed" min = "500" max = "10000" step = "100" value = "1000" >
+                </label>
+
+                <button type = "button" id = "btnDownload" class = "uiTextElement uiTextContainer interactable">Download</button>
+
+            </div>
+
+        </div>
+
+    </body>
+
+</html>
