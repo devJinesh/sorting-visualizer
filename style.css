@@ -1,6 +1,6 @@
 :root
 {
-    --colour-page: linear-gradient(rgb(0, 213, 255), rgb(0, 149, 255), rgba(93, 0, 255, 0.555));
+    --colour-page: #1C2541;
     --colour-element-container: #0b132b;
     --colour-element: #cecece;
     --colour-compared: #cf7622;
