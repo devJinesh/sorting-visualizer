@@ -33,6 +33,24 @@ html
     overflow-y: scroll;
 }
 
+#footer 
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 30px;
+
+    height: var(--height-footer);
+    width: 100%;
+
+    /* background-color: var(--colour-element-container); */
+    /* color: var(--colour-element); */
+    background-color: black;
+    color: white;
+}
+
+
 a
 {
     color: inherit;
